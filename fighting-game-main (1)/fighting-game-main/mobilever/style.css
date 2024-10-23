@@ -1,0 +1,255 @@
+@font-face {
+    font-family: 'KA1';
+    src: url('ka1.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+/* Header styles */
+.header-with-bg {
+    background-image: url('images/background.png');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    position: relative;
+    overflow: hidden;
+}
+
+.header-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.7);
+    z-index: 1;
+}
+
+#header {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    background-color: transparent;
+}
+
+#header .logo {
+    display: none; /* Menyembunyikan logo */
+}
+
+#header nav {
+    margin-left: auto; /* Memindahkan tombol menu ke kanan */
+}
+
+#header nav a {
+    color: #ffffff;
+    text-decoration: none;
+    font-size: 14px;
+    background-color: rgba(255, 255, 255, 0.2);
+    padding: 0.5em 1em;
+    border-radius: 4px;
+    transition: background-color 0.3s ease;
+}
+
+#header nav a:hover {
+    background-color: rgba(255, 255, 255, 0.3);
+}
+
+/* Menu styles */
+#menu {
+    background-color: rgba(0, 0, 0, 0.9);
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: 300px;
+    height: 100vh;
+    padding: 2em;
+    z-index: 1000;
+    display: none;
+}
+
+#menu.is-active {
+    display: block;
+}
+
+#menu .links {
+    list-style: none;
+    padding: 0;
+    margin: 0 0 2em 0;
+}
+
+#menu .links li {
+    margin-bottom: 1em;
+}
+
+#menu .links a {
+    color: #ffffff;
+    text-decoration: none;
+    font-size: 1.2em;
+}
+
+/* Main banner styles */
+.main-banner {
+    position: relative;
+    overflow: hidden;
+    padding-top: 0;
+    margin-top: 0;
+}
+
+.main-banner::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-image: url('images/background.png');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    z-index: -1;
+}
+
+.main-banner .overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.7) !important;
+    z-index: 1;
+}
+
+.main-banner .inner {
+    position: relative;
+    z-index: 2;
+    padding: 0 2em;
+    margin-top: 0;
+}
+
+/* Tambahkan ini untuk menghilangkan margin atas dari elemen pertama di dalam .inner */
+.main-banner .inner > *:first-child {
+    margin-top: 0;
+}
+
+.main-banner .char-image {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    z-index: 2;
+}
+
+.main-banner .char-image img {
+    width: 150px;
+    height: auto;
+    max-width: 100%;
+    display: block;
+}
+
+@media screen and (max-width: 736px) {
+    .main-banner .char-image img {
+        width: 100px;
+    }
+}
+
+/* Typography for banner content */
+.main-banner .major h1 {
+    font-family: 'KA1', 'Arial', sans-serif !important;
+    font-size: 24px !important;
+    color: #ffffff;
+    margin-bottom: 0.5em;
+}
+
+.main-banner .content p {
+    font-family: 'Kongtext', 'Arial', sans-serif !important;
+    font-size: 14px !important;
+    color: #ffffff;
+    margin-top: 1em;
+}
+
+/* Tambahkan atau ubah gaya berikut */
+
+body {
+    margin-top: 0;
+    padding-top: 0 !important; /* Menghilangkan padding atas yang mungkin ditambahkan oleh template */
+}
+
+#wrapper {
+    padding-top: 0;
+}
+
+/* Pastikan header tidak mempengaruhi posisi banner */
+#header {
+    position: absolute;
+    width: 100%;
+    z-index: 1000;
+    background: transparent;
+}
+
+/* Menghilangkan warna biru dari semua elemen */
+*, *::before, *::after {
+    
+}
+
+/* Pastikan overlay tetap berfungsi */
+.header-overlay,
+.main-banner .overlay {
+    background-color: rgba(0, 0, 0, 0.7) !important;
+}
+
+/* Menyesuaikan posisi konten banner */
+.main-banner .inner {
+    padding-top: 60px; /* Sesuaikan nilai ini agar ada sedikit ruang di atas konten */
+}
+
+/* Styles for tiles */
+.tiles article {
+    position: relative;
+    overflow: hidden;
+}
+
+.tiles article .image {
+    transition: transform 0.3s ease;
+}
+
+.tiles article .image:before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.5);
+    z-index: 1;
+    transition: opacity 0.3s ease;
+}
+
+.tiles article.in-view .image:before {
+    opacity: 0;
+}
+
+.tiles article:hover .image:before,
+.tiles article.touch-active .image:before {
+    opacity: 0;
+}
+
+.tiles article header {
+    position: relative;
+    z-index: 2;
+}
+
+@media screen and (max-width: 736px) {
+    .tiles article .image:before {
+        opacity: 1;
+    }
+    
+    .tiles article:active .image:before {
+        opacity: 0;
+    }
+}
+
+/* Tambahkan ini untuk memastikan overlay hilang saat hover pada desktop */
+@media screen and (min-width: 737px) {
+    .tiles article:hover .image:before {
+        opacity: 0;
+    }
+}

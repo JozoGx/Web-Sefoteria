@@ -1,0 +1,1598 @@
+/* Reset dan style dasar */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'kongtext.ttf';
+}
+
+@font-face {
+    font-family: 'ka1.ttf';
+    src: url(ka1.ttf);
+}
+
+@font-face {
+    font-family: 'kongtext.ttf';
+    src: url(kongtext.ttf);
+}
+
+html, body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+.bg {
+    position: relative;
+    background-image: url(background.png);
+    background-size: cover;
+    z-index: 0;
+    height: 100vh;
+}
+
+.bg::before {
+    content: '';
+    position: absolute;
+  
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 10, 30, 0.7); /* Overlay dengan opacity */
+    z-index: 1; /* Pastikan overlay muncul di atas gambar */
+}
+
+.main {
+    position: relative;
+    z-index: 2; /* Pastikan main berada di atas overlay */
+}
+
+/* Header dan navigasi */
+header {
+    color: #ffffff;
+    padding: 1rem 0;
+    position: relative;
+    width: 100%;
+    top: 20;
+    z-index: 1000;
+}
+
+nav ul {
+    display: flex;
+    justify-content: center;
+    list-style: none;
+}
+
+nav ul li {
+    margin: 0 1rem;
+   
+    font-size: 30px;
+    color: #ffffff;
+}
+
+nav ul li a {
+    color: #ffffff;
+    text-decoration: none;
+    transition: color 0.3s ease;
+    font-family: 'ka1.ttf';
+}
+
+nav ul li a:hover {
+    color: #48d5f1;
+}
+
+/* Sections */
+section {
+    position: relative;
+    z-index: 3;
+    padding: 4rem 2rem;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+}
+
+/* Pengaturan umum untuk semua section */
+section {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+}
+
+/* Hero section */
+.hero {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.hero-content {
+    padding-left: 500px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    max-width: 100vh;
+}
+
+.game-logo {
+    align-self: flex-start;
+}
+
+/* Characters section */
+.characters {
+    height: auto;
+    min-height: 220vh;
+}
+
+.characters-content {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+
+.left-images {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 2rem;
+}
+
+.character-item {
+    margin-top: 200px;
+    flex: 1 1 300px;
+    max-width: 300px;
+}
+
+.character-item h1 {
+    font-family: 'ka1.ttf';
+}
+
+.main-content, .main-content-wedok {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    width: 120%;
+}
+
+.main-content h2, h3{
+
+    position: relative;
+    padding-bottom: 100px;
+}
+
+
+/* Features section */
+.features {
+    justify-content: flex-start;
+}
+
+.features-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+}
+
+/* About Us section */
+.about-us {
+    height: auto;
+    min-height: 100vh;
+}
+
+.team-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 2rem;
+    width: 100%;
+    max-width: 1200px;
+}
+
+.team-leader, .team-members {
+    flex: 1 1 300px;
+}
+
+.team-members {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 2rem;
+}
+
+.team-member {
+    flex: 1 1 calc(33.333% - 2rem);
+    min-width: 150px;
+    max-width: 200px;
+}
+
+/* Buy section */
+
+@keyframes move {
+    0% {
+        transform: translateX(0);
+        color: #ff0000; /* Merah */
+    }
+    50% {
+        transform: translateX(50px);
+        color: #ffffff; /* Hijau */
+    }
+    100% {
+        transform: translateX(0);
+        color: #0000ff; /* Biru */
+    }
+}
+
+.buy {
+    padding-top: 300px;
+    justify-content: flex-start;
+}
+
+.buy h2{
+    animation: move 0.1s infinite alternate;
+}
+
+
+.gerakAkhir, .gerakAkhirHp {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 1rem;
+}
+
+.hero {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    color: #fff;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+}
+
+.hero::before {
+    content: "";
+    position: absolute;
+    top: 40px;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.5);
+    border-radius: 50%;
+    z-index: -1;
+    transform: rotate(-10deg) translate(-90px, 150px);
+}
+
+.hero-content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    max-width: 1200px;
+    padding: 0 20px;
+    box-sizing: border-box;
+    z-index: 2;
+}
+
+.hero h1, .hero p {
+    width: 65%;
+    max-width: 800px;
+    margin-bottom: 20px;
+    margin-left: 400px;
+}
+
+.hero h1 {
+    font-family: 'ka1.ttf';
+    position: relative;
+    top: 70px;
+    font-size: 2.5rem;
+}
+
+.hero p {
+    margin-left: 790px;
+    font-size: 1.2rem;
+}
+
+
+
+.main-content {
+    padding-left: 300px;
+    padding-top: 100px;
+}
+
+.main-content p{
+    position: relative;
+    justify-content: left;
+    text-align: left;
+    font-size: 15px;
+    width: 90%;
+    padding-left: 300px;
+}
+
+.main-content h2{
+    padding-left: 100px;
+    position: relative;
+    top: 50px;
+}
+
+.main-content h3{
+    padding-left: 100px;
+}
+
+.main-content-wedok {
+    margin-bottom: 200px;
+    padding-right: 200px;
+    position: relative;
+    top: -300px;
+}
+
+.main-content-wedok h4{
+    position: relative;
+    top: 550px;
+    color: #ffd700;
+
+    font-family: 'ka1.ttf';
+    text-align: left;
+}
+
+.main-content-wedok h3{
+    font-family: 'kongtext.ttf';
+    color: #ffd700;
+}
+
+.main-content-wedok p{
+   
+    font-size: 15px;
+}
+
+.main-content-wedok h3, p{
+    position: relative;
+    top: 90px;
+    right: 13rem;
+    z-index: 1;
+    width: 120%;
+    
+}
+
+
+
+
+.game-logo {
+    position: absolute;
+    bottom: 0; /* Posisikan di bawah */
+    left: 0;   /* Posisikan di kiri */
+    width: 700px; /* Sesuaikan ukuran gambar */
+    height: auto;
+    z-index: 2; /* Pastikan gambar berada di atas elemen lain jika diperlukan */
+}
+
+.idle-logo {
+    position: relative;
+    bottom: -100px;
+    width: 200px;
+    height: auto;
+    left: 100px;
+}
+
+.characters{
+    background-color: #000000;
+    height: 220vh;
+    color: #ffffff;
+    font-size: 35px;
+    width: 100%;
+}
+
+
+.characters-content {
+    height:110vh;
+}
+
+.characters-content-wedok {
+    height:110vh;
+}
+
+.left-images {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    justify-content: center;
+    padding-top: 200px;
+}
+
+.character-item {
+    padding-top: 10px;
+    text-align: center; /* Agar teks h1 sejajar dengan gambar */
+    margin-bottom: 1px; /* Jarak antara tiap gambar */
+}
+
+.character-item h1 {
+    font-size: 1.5em; /* Ukuran teks h1 bisa disesuaikan */
+    margin-bottom: 10px; /* Jarak antara teks dan gambar */
+    color: #ffd700;
+}
+
+.character-icon {
+    width: 150px; /* Sesuaikan ukuran gambar */
+    height: auto;
+}
+
+
+.character-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2rem;
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+}
+
+.character {
+    text-align: center;
+    padding: 1rem;
+    background-color: #cf0000;
+    border-radius: 10px;
+    transition: transform 0.3s ease;
+  
+}
+
+.character:hover {
+    transform: translateY(-5px);
+}
+
+.character-image {
+    position: relative;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    width: 1000px; /* Menggunakan lebar penuh dari container */
+    height: 700px; /* Mempertahankan tinggi */
+    margin-top: 300px; /* Menambahkan margin atas untuk penyesuaian */
+    margin-right: -500px;
+}
+
+.character-image::before {
+    content: "";
+    position: absolute;
+    top: 60%;
+    right: 35%; /* Menggeser ke kanan */
+    width: 1700px; /* Lebar elips */
+    height: 1000px; /* Tinggi elips */
+    background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url(background.png);
+    background-size: cover;
+    background-position: center;
+    border-radius: 50%;
+    transform: translate(50%, -50%) rotate(-10deg); /* Menyesuaikan transformasi */
+    z-index: -1;
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+.character-image img {
+    max-width: 60%; /* Mengurangi ukuran gambar */
+    height: auto;
+    padding-top: 150px;
+    position: relative;
+    z-index: 1;
+    margin-right: 10%; /* Menambahkan margin kanan */
+}
+
+/* Tambahkan ini di bagian bawah file CSS Anda */
+
+
+@keyframes fall {
+    to {
+        transform: translateY(100vh);
+    }
+}
+
+.characters {
+    position: relative;
+    overflow: hidden;
+    background-color: #000000;
+    height: 210vh;
+    color: #ffffff;
+    font-size: 35px;
+    width: 100%;
+}
+
+.rain-container, .lightning {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+}
+
+/* Pastikan semua elemen dalam .characters-content memiliki z-index yang lebih tinggi dari rain-container dan lightning */
+.characters-content * {
+    position: relative;
+    z-index: 3;
+}
+
+.features {
+    height: 100vh;
+    background-color: #e9af00;
+    color: #ffffff;
+}
+
+.features-content {
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    text-align: center;
+}
+
+.feature-list {
+    list-style: none;
+    text-align: center;
+    padding-top: 50px;
+    font-size: 30px;
+}
+
+.feature-list li {
+    margin-bottom: 1rem;
+    font-size: 1.2rem;
+}
+
+.buy h2 {
+    padding-bottom: 50px;
+    font-size: 40px;
+    font-family: 'ka1.ttf';
+}
+
+.cta-button {
+    display: inline-block;
+    background-color: #ffd700;
+    color: #333;
+
+    padding: 1rem 2rem;
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+}
+
+.cta-button:hover {
+    background-color: #ffcc00;
+}
+
+/* Animasi dan efek */
+.fade-in {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 3s ease, transform 1s ease;
+}
+
+.fade-up {
+    opacity: 0;
+    transform: translateY(-20px);
+    transition: opacity 3s ease, transform 1s ease;
+}
+
+.fade-in.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.hover-effect {
+    transition: transform 0.3s ease;
+}
+
+.hover-effect:hover {
+    transform: scale(1.1);
+}
+
+/* Attack animation */
+.attack-animation {
+    background-color: #000;
+    color: #fff;
+   
+    height: 100vh;
+}
+
+.attack-sequence {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 300px;
+}
+
+.attack-sequence img {
+    max-height: 100%;
+    display: none;
+}
+
+/* Attack Right Animation */
+.attack-right-container {
+    position: relative;
+    width: 100px;
+    height: 200px;
+    overflow: hidden;
+    margin-top: 2rem;
+}
+
+.attack-right {
+    position: absolute;
+    right: -100%;
+    top: 50%;
+    transform: translateY(-50%);
+    max-height: 100%;
+    opacity: 0;
+    transition: right 1s ease, opacity 0.5s ease;
+}
+
+.attack-right.active {
+    right: 0;
+    opacity: 1;
+}
+
+.attack-right.pulse {
+    animation: pulse 0.5s ease-in-out;
+}
+
+@keyframes pulse {
+    0% {
+        transform: translateY(-50%) scale(1);
+    }
+    50% {
+        transform: translateY(-50%) scale(1.1);
+    }
+    100% {
+        transform: translateY(-50%) scale(1);
+    }
+}
+
+/* Footer */
+footer {
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    padding: 1rem 0;
+}
+
+/* Navbar styles */
+.navbar {
+    position: relative;
+    z-index: 1000;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 2rem;
+    width: 100%;
+    top: 20px;
+   
+}
+
+.navbar-links {
+    display: flex;
+    list-style: none;
+    padding: 10px 20px;
+    
+}
+
+/* Tambahkan style untuk logo Sefoteria */
+.navbar-logo {
+    font-family: 'ka1.ttf', sans-serif;
+    position: block;
+    right: 30px;
+    font-size: 50px;
+    color: #fff;
+    text-decoration: none;
+    
+}
+
+/* Media query untuk responsivitas */
+
+
+/* Adjust other styles to accommodate the fixed navbar */
+main {
+    position: relative;
+    z-index: 2; /* Pastikan main berada di atas overlay */
+    padding-top: 0; /* Hapus padding-top jika tidak diperlukan */
+}
+
+.hero {
+    padding-top: 80px; /* Sesuaikan nilai ini dengan tinggi navbar Anda */
+}
+
+.character-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 2rem;
+    max-width: 1200px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.character-description {
+    padding-top: 50px;
+    flex: 1;
+    padding-right: 50px;
+    font-size: 15px;
+    z-index: -3;
+    text-decoration: none;
+}
+
+.character-description ul {
+    list-style-type: none;
+    padding-left: 0;
+    max-width: 300px;
+}
+
+.character-description p{
+    padding-right: 150px;
+}
+
+.character-description h3{
+    padding-left: 0;
+}
+
+.character-image-container {
+    flex: 1;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+.attack-right {
+    max-width: 100%;
+    max-height: 500px;
+    object-fit: contain;
+    opacity: 1; /* Ubah menjadi 1 untuk selalu menampilkan gambar */
+    position: static; /* Hapus positioning absolut */
+    transform:rotate(); /* Hapus transformasi */
+    transition:cubic-bezier(0.075, 0.82, 0.165, 1) /* Hapus transisi */
+}
+
+.gerakAkhir img {
+    position: relative;
+    top: 370px;
+    height: auto;
+}
+
+.buy {
+    background-color: hsl(0, 100%, 28%);
+    height: 1000px
+}
+
+footer {
+    background-color: #000000;
+    padding: 1rem 0;
+    text-align: center;
+    height: 25vh;
+} 
+
+/* Tambahkan ini di bagian bawah file CSS Anda */
+.lightning {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(255, 255, 255, 0.1);
+    z-index: 1;
+    pointer-events: none;
+    opacity: 0;
+}
+
+.characters {
+    position: relative;
+    overflow: hidden;
+    background-color: #000000;
+    height: 220vh;
+    color: #ffffff;
+    font-size: 35px;
+    width: 100%;
+}
+
+.rain-container, .lightning {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 120vh;
+    pointer-events: none;
+}
+
+
+.characters {
+    position: relative;
+    overflow: hidden;
+}
+
+.lightning {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+}
+
+.rain-container {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100ps;
+    pointer-events: none;
+}
+
+.raindrop {
+    position: absolute;
+    width: 2px;
+    height: 20px;
+    background: linear-gradient(to bottom, rgba(255, 255, 255, 0), rgba(138, 165, 255, 0.7));
+    animation: fall linear infinite;
+}
+
+@keyframes fall {
+    to {
+        transform: translateY(220vh);
+    }
+}
+
+.lightning {
+    background-color: rgba(255, 255, 255, 0.1);
+    opacity: 0;
+    z-index: 1;
+}
+
+
+.team-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 2rem;
+    margin-top: 2rem;
+    width: 100%;
+    max-width: 1200px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.team-member {
+    flex: 0 1 calc(16.666% - 2rem);
+    min-width: 150px;
+    max-width: 200px;
+    background-color: rgba(255, 255, 255, 0.1);
+    border-radius: 10px;
+    padding: 1rem;
+    text-align: center;
+    transition: transform 0.3s ease;
+}
+
+.team-member:hover {
+    transform: translateY(-5px);
+}
+
+.pixel-image {
+    width: 100%;
+    padding-bottom: 100%;
+    position: relative;
+    overflow: hidden;
+    border-radius: 10px;
+    margin-bottom: 1rem;
+}
+
+.pixel-image img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.team-member h1 {
+    font-size: 1rem;
+    margin-bottom: 0.5rem;
+}
+
+.team-member h4 {
+    font-size: 0.9rem;
+    margin: 0.5rem 0;
+    color: #ffd700;
+}
+
+.team-member ul {
+    font-size: 0.8rem;
+    padding-left: 0;
+    list-style-type: none;
+}
+
+.team-member li {
+    margin-bottom: 0.3rem;
+}
+
+
+.about-us {
+    background-color: #000000;
+    color: #ffffff;
+    padding: 4rem 2rem;
+    height: 1080px; /* Ubah max-height menjadi min-height */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+    overflow: hidden; /* Tambahkan ini untuk mencegah overflow */
+    padding-left: 400px;
+    padding-top: 200px;
+}
+
+.team-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    max-width: 1200px;
+    margin-top: 2rem;
+    position: relative; /* Tambahkan ini */
+}
+
+.team-leader {
+    flex: 0 1 auto; /* Ubah ini */
+    min-width: 300px;
+    background-color: rgba(255, 255, 255, 0.2);
+    border-radius: 10px;
+    padding: 1rem;
+    text-align: center;
+    height: 1260px;
+    margin-bottom: 4rem;
+    position: absolute; /* Ubah menjadi absolute */
+    left: 0; /* Sesuaikan posisi */
+    top: 50%; /* Posisikan di tengah vertikal */
+    transform: translateY(-50%); /* Sesuaikan posisi vertikal */
+    font-size: small;
+}
+
+@keyframes koko {
+    0% {
+        color: #ff0000; /* Merah */
+    }
+    50% {      
+        color: #ffff3d; /* Hijau */
+    }
+    100% {
+        color: #40ff00; /* Biru */
+    }
+}
+
+.team-leader h1 {
+    font-size: 57px;
+    padding-top: 5px;
+    color: #ffffff;
+    animation: koko 1s infinite alternate;
+    transform: rotate(45deg);
+    font-family: 'ka1.ttf';
+    
+}
+
+.about-us h2 {
+    position: relative;
+    padding-left: 400px;
+    color: #ffd700;
+}
+
+.team-leader::after {
+    content: '';
+    position: absolute;
+    top: 100%; /* Mulai dari bawah team-leader */
+    left: 50%;
+    width: 2px;
+    height: 100px; 
+    background-color: #ffffff;
+}
+
+.team-members {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 5rem;
+    width: 100%;
+    max-width: 800px; /* Batasi lebar maksimum */
+    margin-left: auto;
+    position: relative;
+    padding-top: 2rem; /* Beri ruang untuk garis penghubung */
+
+}
+
+.team-members::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100px; /* Sesuaikan dengan posisi team-leader */
+    width: calc(100% + 100%); /* Sesuaikan lebar garis */
+    height: 2px;
+    background-color: #ffd700;
+}
+
+.team-member:nth-child(n+4)::before {
+    content: '';
+    position: absolute;
+    top: 1px; /* Sesuaikan nilai ini untuk mengubah arah pertumbuhan garis */
+    left: 50%;
+    width: 2px;
+    height: 5rem; /* Atur tinggi garis vertikal di sini */
+    background-color: #ffd700;
+    transform: translateY(-100%); /* Tambahkan ini untuk memastikan garis tumbuh ke atas */
+}
+
+.team-member {
+    flex: 0 1 calc(33.333% - 2rem); /* Ubah ini untuk 3 anggota per baris */
+    min-width: 150px;
+    max-width: 200px;
+    background-color: rgba(255, 255, 255, 0.1);
+    border-radius: 10px;
+    padding: 1rem;
+    text-align: center;
+    transition: transform 0.3s ease;
+    position: relative;
+}
+
+.team-member li {
+    font-size: 10px;
+}
+
+.team-member::before {
+    content: '';
+    position: absolute;
+    top: -2rem;
+    left: 50%;
+    width: 2px;
+    height: 2rem;
+    background-color: #ffd700;
+}
+
+.image-kucing {
+    position: absolute;
+    left: -450px;
+    top: 50%;
+    transform: translateY(-50%);
+    max-width: 200px; /* Sesuaikan ukuran */
+}
+
+.image-kucing img {
+    width: 100px;
+    height: auto;
+}
+
+/* Media queries untuk responsivitas */
+
+
+.chat-widget {
+    position: fixed;
+    bottom: 30px;
+    right: 20px;
+    z-index: 1000;
+    font-family: 'kongtext.ttf', 'Arial', sans-serif;
+}
+
+.chat-toggle {
+    width: 100px;
+    height: 100px;
+    background-image: url('2.png');
+    background-size: 70px 80px;
+    background-position: 16px 17px;
+    border: none;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 30px;
+    color: white;
+    transition: all 0.3s ease;
+    background-color: transparent;
+    background-repeat: no-repeat;
+}
+
+.chat-toggle:hover {
+    transform: scale(1.1);
+}
+
+.chat-toggle i {
+    /* Jika ikon robot masih diinginkan, atur warnanya agar kontras dengan gambar */
+    color: white;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+}
+
+.chat-toggle.hidden {
+    opacity: 0;
+    visibility: hidden;
+}
+
+.chat-container {
+    position: absolute;
+    bottom: 10px;
+    right: 0;
+    width: 300px;
+    height: 450px;
+    background-image: url('1.svg');
+    background-size: 100% 5700px; /* Lebar memenuhi kontainer, tinggi otomatis */
+    background-repeat: no-repeat;
+    background-position: center;
+    display: flex;
+    flex-direction: column;
+    overflow: visible; /* Mengizinkan konten melampaui batas kontainer */
+}
+
+.close-chat {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    width: 30px;
+    height: 30px;
+    background-color: rgba(255, 215, 0, 0.2); /* Warna emas dengan transparansi */
+    border: 2px solid #ffd700; /* Border emas */
+    border-radius: 50%; /* Membuat tombol bulat */
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: all 0.3s ease;
+}
+
+.close-chat:hover {
+    background-color: rgba(255, 215, 0, 0.5); /* Warna emas lebih pekat saat hover */
+   /* Efek rotasi saat hover */
+}
+
+.close-chat::before,
+.close-chat::after {
+    content: '';
+    position: absolute;
+    width: 15px;
+    height: 5px;
+    background-color: #ffffff; /* Warna garis putih */
+}
+
+.close-chat::before {
+    transform: rotate(45deg);
+}
+
+.close-chat::after {
+    transform: rotate(-45deg);
+}
+
+
+.chat-header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    padding-top: 30px; /* Menambah padding atas untuk memberi ruang pada tombol close */
+}
+
+.close-chat {
+    position: absolute;
+    top: 0px; /* Menggeser tombol ke atas */
+    left: 50%; /* Memposisikan di tengah horizontal */
+    transform: translateX(-50%); /* Menyesuaikan posisi agar benar-benar di tengah */
+    width: 50%;
+    height: 30px;
+    background-color: rgba(255, 215, 0, 0.2);
+    border: 2px solid #ffd700;
+    border-radius: 50%;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: all 0.3s ease;
+}
+
+.chat-header h4 {
+    font-size: 20px;
+    font-family: 'ka1.ttf', 'Arial', sans-serif;
+    color: #ffd700;
+    text-align: center;
+    font-weight: bold;
+    margin-top: 10px; /* Menambah jarak antara tombol close dan teks */
+}
+
+.chat-content {
+    position: absolute;
+    top: 15%;
+    padding-left: 50px;
+    bottom: 15%;
+    left: 0;
+    right: 0;
+    display: flex;
+    flex-direction: column;
+   
+}
+
+#chat-messages {
+    flex-grow: 1;
+    overflow-y: auto;
+    padding-top: 30px;
+    padding-left: 40px;
+    font-size: 11px;
+    width: 310px;
+    text-align: right;
+    color: rgb(0, 0, 0);
+    border-color: #ffffff;
+}
+
+.chat-input {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#user-input {
+    width: calc(100% - 90px);
+    padding: 8px;
+    border: none;
+    background-color: rgba(209, 171, 3, 0.2);
+    color: white;
+    font-size: 12px;
+    margin-top: 50px;
+    border-color: #ffffff;
+    justify-content: center;
+    align-items: center;
+}
+
+#send-button {
+    position: absolute;
+    padding-top: 15px;
+    bottom: 10px;
+    right: 45px;
+    width: 30px;
+    height: 30px;
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    color: #ffd700; /* Warna emas untuk ikon */
+    font-size: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: color 0.3s ease, transform 0.3s ease;
+}
+
+#send-button:hover {
+    color: white;
+    transform: scale(1.1);
+}
+
+#send-button i {
+    transform: rotate(45deg); /* Memutar ikon agar terlihat seperti pesawat terbang */
+}
+
+.hidden {
+    display: none;
+}
+
+/* Tambahkan style untuk pesan jika diperlukan */
+.message {
+    margin-bottom: 3px;
+    padding: 8px;
+    border-radius: 8px;
+    padding-left: 20px;
+    max-width: 80%;
+    background-color: rgba(255, 238, 0, 0.4);
+}
+
+.ai-message {
+    background-color: rgba(9, 88, 207, 0.2);
+    align-self: flex-start;
+    text-align: left;
+
+    .game-logo {
+        width: 50%;
+        max-width: 200px;
+        bottom: 10px;
+        left: 50%;
+        transform: translateX(-50%);
+    }
+
+    .navbar {
+        padding: 0.5rem;
+    }
+
+    .navbar-links {
+        font-size: 14px;
+    }
+
+    .navbar-logo {
+        font-size: 18px;
+    }
+}
+
+/* Tambahkan ini di bagian bawah file CSS Anda */
+
+@media screen and (max-width: 768px) {
+  body, html {
+    font-size: 7px;
+  }
+
+  section {
+    max-height: 100vh;
+    max-width: 100vh;
+    padding: 2rem 1rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+  }
+
+  .navbar {
+    padding: 0.5rem;
+  }
+
+  .navbar-logo {
+    font-size: 10px !important;
+  }
+
+  .bg {
+    height: auto;
+    max-height: 50vh;
+  }
+
+  .hero {
+    height: auto;
+    max-height: 50vh;
+  }
+
+  .hero h1 {
+    font-size: 12px !important;
+  }
+
+  .hero p {
+    font-size: 7px !important;
+  }
+
+  .game-logo {
+    width: 30%;
+    max-width: 100px;
+  }
+
+
+  .characters {
+    max-width: 100%;
+    max-height:50vh;
+  }
+
+  .character-image::before {
+    display: none;
+  }
+
+  .feature-list {
+    font-size: 7px !important;
+  }
+
+  .team-container {
+    width: 90%;
+  }
+
+  .team-leader, .team-members {
+    width: 90%;
+    max-width: 270px;
+  }
+
+  .team-member {
+    flex: 0 1 45%;
+    min-width: 135px;
+    max-width: 180px;
+  }
+
+  .gerakAkhir, .gerakAkhirHp {
+    width: 90%;
+  }
+
+  .gerakAkhir img, .gerakAkhirHp img {
+    width: 36%;
+    max-width: 90px;
+    margin: 0.45rem;
+  }
+
+  .chat-toggle {
+    width: 30px;
+    height: 30px;
+    background-size: 20px 25px;
+    background-position: 5px 2.5px;
+  }
+
+  .chat-container {
+    width: 81%;
+    right: 4.5%;
+  }
+
+  #chat-messages {
+    font-size: 7px !important;
+    width: 279px;
+  }
+
+  #user-input {
+    font-size: 7px !important;
+  }
+
+  #send-button {
+    font-size: 12px !important;
+  }
+
+  img {
+    max-width: 50% !important;
+    height: auto !important;
+  }
+
+  h1 {
+    font-size: 15px !important;
+  }
+
+  p, li {
+    font-size: 7px !important;
+  }
+
+  .left-images {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: nowrap;
+    padding-top: 20px;
+  }
+
+  .character-item {
+    flex: 0 1 33.333%;
+    max-width: 33.333%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    padding: 0;
+    margin: 0;
+    position: relative;
+  }
+
+  .character-icon {
+    width: 100%;
+
+    margin-bottom: 5px;
+  }
+
+  .character-item h1 {
+    font-size: 9px !important;
+    margin: 0 0 2px 0;
+    padding: 0;
+    text-align: center;
+    width: 100%;
+  }
+
+  .character-item ul {
+    list-style-type: none;
+    padding-top: 100px;
+    margin: 0;
+    text-align: center;
+    width: 100%;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+  }
+
+  .character-description li {
+    font-size: 4px !important;
+    margin: 0;
+    line-height: 1.2;
+    text-align: center;
+    width: 100%;
+  }
+
+  .character-description p {
+    font-size: 5px !important;
+    margin: 0;
+    line-height: 1.2;
+    text-align: center;
+    width: 100%;
+  }
+
+  .main-content {
+    padding-left: 0px;
+  }
+
+  .main-content h2 {
+    font-size: 12px !important;
+    margin: 0 !important;
+    padding-left: 70px !important;
+    line-height: 1.2 !important;
+    margin-bottom: 0 !important;
+    position: relative;
+    top: -80px;
+  }
+
+  .main-content h3 {
+    font-size: 10px !important;
+    margin: 0 !important;
+    padding-left: 70px !important;
+    line-height: 1.2 !important;
+    position: relative;
+    top: -20px;
+  }
+
+  .main-content p {
+    width: 90%;
+    padding-right: 0;
+    padding-left: 160px;
+    font-size: 5px !important;
+    text-align: left;
+    position: relative;
+    top: -50px;
+  }
+
+
+  /* features */
+  .features {
+    height: 100vh;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    overflow-y: auto;
+    padding: 20px;
+    box-sizing: border-box;
+  }
+
+  .features-content {
+    width: 100%;
+    max-width: 100%;
+    text-align: center;
+  }
+
+  .features h2 {
+    font-size: 18px;
+    margin-bottom: 20px;
+  }
+
+  .feature-list {
+    padding-left: 0;
+    list-style-type: none;
+  }
+
+  .feature-list li {
+    margin-bottom: 10px;
+  }
+
+  .features img {
+    max-width: 80%;
+    height: auto;
+    margin-top: 20px;
+  }
+}
+
+/* Tambahkan ini di bagian bawah file CSS Anda, setelah semua style yang ada */
+
+@media screen and (max-width: 768px) {
+    .characters {
+        height: 100vh;
+    }
+
+    .characters-content-wedok {
+        display: none;
+        height: 0vh;
+        overflow: hidden;
+    }
+
+    /* Sembunyikan scrollbar tapi tetap bisa di-scroll */
+    .characters::-webkit-scrollbar {
+        display: none;
+    }
+    
+    .characters {
+        -ms-overflow-style: none;
+        scrollbar-width: none;
+    }
+}
+
+/* Pastikan tampilan desktop tetap sama */
+
